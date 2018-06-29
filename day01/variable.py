@@ -4,3 +4,5 @@
 from sys import argv, path
 
 print(argv, path)
+
+print('hello world')
