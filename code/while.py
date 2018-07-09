@@ -35,10 +35,13 @@ for x in l:
 else:
     print('for end')
 
-while True:
-    pass
+# while True:
+#     pass
 
-for x in [1,2]:
-    pass
+# for x in [1,2]:
+#     pass
 
-print('end')
+# print('end')
+
+for x in 'hello':
+    print(x, end=' ')
