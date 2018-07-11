@@ -45,3 +45,9 @@ li = [lambda :x for x in range(10)]
 
 print(li, type(li))
 print(type(li[0]))
+
+for k, v in {1:11, 2:22}.items():
+    print(k, v)
+
+for k, v in enumerate([1,2,3]):
+    print(k, v)
