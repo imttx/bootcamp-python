@@ -51,3 +51,49 @@ for k, v in {1:11, 2:22}.items():
 
 for k, v in enumerate([1,2,3]):
     print(k, v)
+
+
+# ----------------------
+
+
+def odd(max_num = 10):
+    n = 0
+
+    while n <= max_num:
+        yield n**2
+        n+=1
+
+    return 'done'
+
+o = odd(5)
+
+print(type(o))
+
+# try:
+#     # for x in o:
+#         # print(x)
+#     print(next(o))
+# except StopIteration as e:
+#     print('yield return:', e.value)
+
+
+while True:
+    try:
+        print(next(o))
+    except StopIteration as e:
+        print(e.value)
+        break
+
+def foo1():
+    yield 1
+    yield 2
+
+
+f = foo1()
+
+# print(next(f))
+# print(next(f))
+# print(next(f))
+
+for x in f:
+    print(x)
