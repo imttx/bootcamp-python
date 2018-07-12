@@ -16,3 +16,6 @@ for k, v in enumerate(range(5)):
 
 for k, v in enumerate([0,1,2,3,4]):
     print(k, v)
+
+for k, v in enumerate('abc'):
+    print(k, v)
