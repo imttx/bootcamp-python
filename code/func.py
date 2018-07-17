@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #coding:utf-8
 
+from functools import reduce
+
 def say_hello(name, age = 18):
     print('name is: ', name, '，age is:', age)
 
@@ -97,3 +99,54 @@ f = foo1()
 
 for x in f:
     print(x)
+
+
+f = foo1()
+
+print(type(f))
+print(next(f))
+print(next(f))
+
+# ????
+
+digits_map = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+
+def char2num(x):
+    return digits_map[x]
+
+
+res = reduce(lambda x, y: x * 10 + y, map(lambda x: int(x), '123456'))
+
+print(res, type(res))
+
+def lazy_sum(*args):
+    def sum():
+        ax = 0
+        for n in args:
+            ax += n
+
+        return ax
+    return sum
+
+s = lazy_sum(1,2,3,4,5)
+
+# print(s())
+
+def count():
+    fs = []
+    for i in range(1,4):
+        def f():
+            return i**2
+        fs.append(f)
+    return fs
+
+f1, f2, f3 = count()
+
+print(f1(), f2(), f3())
+
+def get_func():
+    return lambda x, y: x**y
+
+ff = get_func()
+
+print(ff(5, 2))
