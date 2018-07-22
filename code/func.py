@@ -4,7 +4,7 @@
 from functools import reduce
 
 def say_hello(name, age = 18):
-    print('name is: ', name, '，age is:', age)
+    print('name is: ', name, 'ï¼Œage is:', age)
 
 say_hello('maratrix', 18)
 
@@ -150,3 +150,5 @@ def get_func():
 ff = get_func()
 
 print(ff(5, 2))
+
+int()
